@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./TipCalc.css">
+    <script src="./TipCalc.js" defer></script>
+</head>
+<body>
+    <div class="container">
+     <div id="form"> 
+     <form id="tipForm" >
+        <div class="title">
+            <h1>Tip Calculator</h1>
+        </div>
+       
+        <div class="bill">
+            <label>How Much Was Your Bill ?</label>
+            <br>
+            <span>$</span>
+            <input type="text" id="num" class="pic" placeholder="Bill Amount" value="" onchange="updatBill(event)"/>
+        </div>
+        
+        <div class="Peoplenum">
+            <label>How Many People Sharing The Bill ? </label>
+            <br>
+           
+            <input type="text" id="peoplenumber" onchange="updatePeopleNumber(event)"/>
+        </div>
+       
+        <div class="ser">
+            <label>How Was Your Service ? </label>
+            <br>
+            <select id="service" >
+                <option value="0">Choose</option>
+                <option value="1">Great-20%</option>
+                <option value="2">Good-10%</option>
+                <option value="3">Bad-2%</option>
+            </select>
+        </div>
+        
+        <div >
+            <input type="button" class="submit" id="calc" value="Calculate" ></button>
+        </div>
+        
+    </form>
+    <hr>
+    <div class="res" id="showres">
+       <label id="fintip"></label>
+        <br>
+         <label id="totalamountfinal"></label>
+        <br>
+         <label id="personout"></label>
+    </div>   
+</div>
+</body>
+</html>
